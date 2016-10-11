@@ -6,14 +6,21 @@
     <meta name="description" content="Logging, ">
 
 
-        <title>phapdv author // Logging // </title>
+        <title>Solution for ProjectEuler // Logging // </title>
 
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pure/0.3.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/theme/css/pure.css">
+    <link rel="stylesheet" href="/theme/css/pygments.css">
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fitvids/1.0.1/jquery.fitvids.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".content").fitVids();
+        });
+    </script>
 </head>
 
 <body>
@@ -46,14 +53,14 @@
         </div>
     <div class="pure-u">
         <div class="content">
-            <!-- A wrapper for all the blog posts -->
-            <div class="posts">
-                <h1 class="content-subhead">
-Posts by 'phapdv'                </h1>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/solution-for-projecteuler.html">Solution for ProjectEuler</a></h3>
-                            <p class="post-meta"><h1>Task</h1>
+            <section class="post">
+                <header class="post-header">
+                    <h1>Solution for ProjectEuler</h1>
+                        <p class="post-meta">
+                            // under                         </p>
+                </header>
+            </section>
+            <h1>Task</h1>
 <ul>
 <li>Push code to github.</li>
 <li>Each module solves 1 problem.</li>
@@ -77,37 +84,23 @@ Posts by 'phapdv'                </h1>
 <span class="kn">from</span> <span class="nn">base</span> <span class="kn">import</span> <span class="n">Problem</span>
 
 
-<span class="k">class ...</span></pre></div></p>
-                            <p class="post-meta">
-                                in <a href="/category/projecteuler.html">ProjectEuler</a> &middot; Tue 11 October 2016
-                            </p>
-                        </header>
-                    </section>
-                    <section class="post">
-                        <header class="post-header">
-                            <h3><a class="post-title" href="/first_post.html">first_post</a></h3>
-                            <p class="post-meta"><p>Hello world from Pelican!</p></p>
-                            <p class="post-meta">
-                                in <a href="/category/test.html">Test</a> &middot; Sat 13 December 2014
-                            </p>
-                        </header>
-                    </section>
-<div class="pagination-wrapper content-subhead">
-    <div class="pagination">
-        <div class="pagination-left">
-                &nbsp;
-        </div>
-        <span>Page 1 / 1</span>
-        <div class="pagination-right">
-        </div>
-    </div>
-</div><footer class="footer">
+<span class="k">class</span> <span class="nc">Solution</span><span class="p">(</span><span class="n">Problem</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">solve</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Solving problem {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">number</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Result: {}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">sum</span><span class="p">([</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">input_</span><span class="p">)</span> <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">])))</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">solution</span> <span class="o">=</span> <span class="n">Solution</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">solution</span><span class="o">.</span><span class="n">solve</span><span class="p">(</span><span class="mi">1000</span><span class="p">)</span>
+</pre></div>
+            <a href="#" class="go-top">Go Top</a>
+<footer class="footer">
     <p>&copy; phapdv &ndash;
         Built with <a href="https://github.com/PurePelicanTheme/pure-single">Pure Theme</a>
         for <a href="http://blog.getpelican.com/">Pelican</a>
     </p>
-</footer>            </div>
-        </div>
+</footer>        </div>
     </div>
     </div>
     <script>
