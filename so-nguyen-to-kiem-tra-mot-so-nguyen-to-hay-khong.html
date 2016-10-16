@@ -61,16 +61,16 @@
             <h2>Prime number (Số nguyên tố)</h2>
 <p><img alt="" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Animation_Sieb_des_Eratosthenes_%28vi%29.gif" /></p>
 <blockquote>
-<p>Ngày xưa đi học thì chỉ biết số nguyên tố là số chia hết cho nó và chính nó. Sau khi đi học lớp python của <a href="pymi.vn">PyFML</a> thì mới biết số nguyên tố có tính chất là ước tự nhiên khác 1 nhỏ nhất của một số tự nhiên là số nguyên tố. Hay nói cách khác là số tự nhiên chỉ có ước số là 1 và chính nó là số nguyên tố. Xa hơn chút nữa là chúng ta cần kiểm tra xem số tự nhiên đó có ước nào nữa ngoài ước 1 và chính nó.</p>
+<p>Ngày xưa đi học thì chỉ biết số nguyên tố là số chia hết cho nó và chính nó. Sau khi đi học lớp python của <a href="http://pymi.vn">PyFML</a> thì mới biết số nguyên tố có tính chất là ước tự nhiên khác 1 nhỏ nhất của một số tự nhiên là số nguyên tố. Hay nói cách khác là số tự nhiên chỉ có ước số là 1 và chính nó là số nguyên tố. Xa hơn chút nữa là chúng ta cần kiểm tra xem số tự nhiên đó có ước nào nữa ngoài ước 1 và chính nó.</p>
 </blockquote>
 <h2>Kiểm tra có là một số nguyên tố?</h2>
 <p>Có nhiều cách để kiểm tra 1 số tự nhiên có phải là số nguyên tố hay không. Ở đây chúng ta sẽ sử dụng cách kiểm tra các ước của một số tự nhiên.</p>
 <ul>
-<li>Đầu tiên thuật toán sẽ là kiểm tra các số có khả năng là ước của số <code>n</code> hay không? Dãy số có khả năng là ước của <code>n</code> nằm trong khoảng từ 1 đến <code>n</code>. Nhưng vì <code>1</code> và <code>n</code> thì luôn là ước của số đó nên có thể loại bỏ hai trường hợp này. Code python như sau:</li>
+<li>Đầu tiên thuật toán sẽ là kiểm tra các số có khả năng là ước của số <code>n</code> hay không? Dãy số có khả năng là ước của <code>n</code> nằm trong khoảng từ <code>1</code> đến <code>n</code>. Nhưng vì <code>1</code> và <code>n</code> thì luôn là ước của số đó nên có thể loại bỏ hai trường hợp này. Code python như sau:</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">13</span>
 <span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">False</span>
     <span class="k">return</span> <span class="bp">True</span>
@@ -78,7 +78,7 @@
 
 
 <ul>
-<li>Tất cả các số tự nhiên có đúng với function trên hay không ? Nếu <code>n = 1</code> thì sao nhỉ?(True)..?..?? Số 1 không phải là số nguyên tố. Số 0 cũng không phải là số nguyên tố. Sửa một chút cho nó đúng.</li>
+<li>Tất cả các số tự nhiên có đúng với function trên hay không ? Nếu <code>n = 1</code> thì sao nhỉ?(True)..?..?? Số <code>1</code> không phải là số nguyên tố. Số <code>0</code> cũng không phải là số nguyên tố. Sửa một chút cho nó đúng.</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -92,13 +92,13 @@
 
 
 <ul>
-<li>Ok rồi đó. Nhưng mà ước số của một số thì không lớn hơn số đó chia 2. Hee, CPU sẽ bớt được một nửa số vòng. Code vẫn vậy chỉ sửa cho cái vòng loop nó nhỏ bằng <code>n/2</code> thui.</li>
+<li>Ok rồi đó. Nhưng mà ước số của một số thì không lớn hơn số đó chia <code>2</code>. Hee, CPU sẽ bớt được một nửa số vòng. Code vẫn vậy chỉ sửa cho cái vòng loop nó nhỏ bằng <code>n/2</code> thui.</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">92</span>
 <span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">False</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">False</span>
     <span class="k">return</span> <span class="bp">True</span>
@@ -106,7 +106,7 @@
 
 
 <ul>
-<li>Đi học python <a href="pymi.vn">PyFML</a> thầy giáo lại bảo chỉ cần kiểm tra đến căn bậc 2 của n. Đíu hỉu tại sao nữa? Thắc mắc mời đi học ở <a href="http://pymi.vn">PyFML</a> để gặp thầy mình.</li>
+<li>Đi học python <a href="http://pymi.vn">PyFML</a> thầy giáo lại bảo chỉ cần kiểm tra đến căn bậc <code>2</code> của <code>n</code>. Đíu hỉu tại sao nữa? Thắc mắc mời đi học ở <a href="http://pymi.vn">PyFML</a> để gặp thầy mình.</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">87</span>
 <span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -120,7 +120,7 @@
 
 
 <h2>Tối ưu</h2>
-<p>Chú ý hàm <code>is_prime</code>, mỗi vòng lặp sẽ phải tính toán căn bặc hai của <code>n</code> vì thế đặt nó thành cái gì đó cho đỡ phải tính nhiều lần. Rồi nếu <code>n % 2 == 0</code> hay <code>n * 3 == 0</code> thì n cũng không phải là số nguyên tố.</p>
+<p>Chú ý hàm <code>is_prime</code>, mỗi vòng lặp sẽ phải tính toán căn bặc hai của <code>n</code> vì thế đặt nó thành cái gì đó cho đỡ phải tính nhiều lần. Rồi nếu <code>n % 2 == 0</code> hay <code>n % 3 == 0</code> thì n cũng không phải là số nguyên tố.</p>
 <div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">45</span>
 <span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
     <span class="n">m</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
@@ -161,10 +161,8 @@ Khi giải thuật kết thúc, tất các số chưa bị đánh dấu trong da
         <span class="k">while</span> <span class="n">k</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">:</span>
             <span class="n">numbers</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
             <span class="n">k</span> <span class="o">=</span> <span class="n">k</span><span class="o">+</span><span class="n">i</span>
-    <span class="n">primes</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
-            <span class="n">primes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+    <span class="n">primes</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span>
     <span class="k">return</span> <span class="n">primes</span>
 </pre></div>
 
