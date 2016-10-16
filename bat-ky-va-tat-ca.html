@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="PhapDV" />
+        <meta name="copyright" content="PhapDV" />
+
+<meta name="keywords" content="Programming, Python, Tutorial, python, " />
+        <title>Bất kỳ và Tất cả  · Logging
+</title>
+        <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/theme/css/style.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/theme/css/solarizedlight.css" media="screen">
+        <link rel="shortcut icon" href="/theme/images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="/theme/images/apple-touch-icon.png" />
+        <link rel="apple-touch-icon" sizes="57x57" href="/theme/images/apple-touch-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="/theme/images/apple-touch-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="/theme/images/apple-touch-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="/theme/images/apple-touch-icon-144x144.png" />
+        <link rel="icon" href="/theme/images/apple-touch-icon-144x144.png" />
+    </head>
+    <body>
+        <div id="content-sans-footer">
+        <div class="navbar navbar-static-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </a>
+                    <a class="brand" href="/"><span class=site-name>Logging</span></a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav pull-right top-menu">
+                            <li ><a href="">Home</a></li>
+                            <li ><a href="/categories.html">Categories</a></li>
+                            <li ><a href="/tags.html">Tags</a></li>
+                            <li ><a href="/archives.html">Archives</a></li>
+                            <li><form class="navbar-search" action="/search.html" onsubmit="return validateForm(this.elements['q'].value);"> <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input"></form></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span1"></div>
+                <div class="span10">
+<article>
+<div class="row-fluid">
+    <header class="page_header span10 offset2">
+    <h1><a href="/bat-ky-va-tat-ca.html"> Bất kỳ và Tất cả  </a></h1>
+    </header>
+</div>
+
+<div class="row-fluid">
+        <div class="span8 offset2 article-content">
+
+            <h2>Any(bất kỳ) and All(tất cả)</h2>
+<ul>
+<li>Trong python có hai hàm <code>built in</code> function là any() và all(). Cả hai hàm đều trả về giá trị <code>True</code>. Đầu vào là một iterable.</li>
+<li>All return True if all elements of the iterable are true (or if the iterable is empty)</li>
+<li>Any return True if any element of the iterable is true. If the iterable is empty, return False.</li>
+</ul>
+<h3>1. All()</h3>
+<ul>
+<li>Xét ví dụ, kiểm tra một chuỗi xem tất cả có phải là <code>t</code> hay không ?</li>
+</ul>
+<p>Đơn giản nhưng khá dài:</p>
+<div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;python&#39;</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="n">checks</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">c</span> <span class="o">==</span> <span class="s1">&#39;t&#39;</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Tất cả chuỗi không là t&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Tất cả chuỗi là t&#39;</span><span class="p">)</span>
+</pre></div>
+
+
+<p>One line với all():</p>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">all</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="s1">&#39;t&#39;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;python&#39;</span><span class="p">))</span>
+</pre></div>
+
+
+<h3>2. Any()</h3>
+<ul>
+<li>Với ví dụ như trên, kiểm tra chuỗi có ít nhất 1 ký tự <code>t</code> hay không ?</li>
+</ul>
+<p>One line với any()</p>
+<div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="nb">any</span><span class="p">(</span><span class="n">c</span> <span class="o">==</span> <span class="s1">&#39;t&#39;</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="s1">&#39;python&#39;</span><span class="p">))</span>
+</pre></div>
+
+
+<blockquote>
+<p><code>Any()</code> trả về True nếu đúng ít nhất một trường hợp. <code>All()</code> trả về True nếu tất cả các trường hợp đều đúng.</p>
+</blockquote>
+            <aside>
+            <hr/>
+            <nav>
+            <ul class="articles_timeline">
+ 
+                <li class="previous_article">« <a href="/so-nguyen-to-kiem-tra-mot-so-nguyen-to-hay-khong.html" title="Previous: Số nguyên tố, kiểm tra một số nguyên tố hay không?">Số nguyên tố, kiểm tra một số nguyên tố hay không?</a></li>
+            </ul>
+            </nav>
+            </aside>
+        </div>
+        <section>
+        <div class="span2" style="float:right;font-size:0.9em;">
+ 
+            <h4>Published</h4>
+            <time pubdate="pubdate" datetime="2016-10-14T00:00:00+07:00">Oct 14, 2016</time>
+            <h4>Category</h4>
+            <a class="category-link" href="/categories.html#Tutorial,-python-ref">Tutorial, python</a> 
+            <h4>Tags</h4>
+            <ul class="list-of-tags tags-in-article"> 
+                <li><a href="/tags.html#Programming-ref">Programming
+                    <span>2</span>
+</a></li>
+                <li><a href="/tags.html#Python-ref">Python
+                    <span>2</span>
+</a></li>
+            </ul>
+
+        </div>
+        </section>
+</div>
+</article>
+                </div>
+                <div class="span1"></div>
+            </div>
+        </div>
+    </div>
+<footer>
+<div id="footer">
+    <ul class="footer-content">
+        <li class="elegant-power">Powered by <a href="http://getpelican.com/" title="Pelican Home Page">Pelican</a>. Theme: <a href="http://oncrashreboot.com/pelican-elegant" title="Theme Elegant Home Page">Elegant</a> by <a href="http://oncrashreboot.com" title="Talha Mansoor Home Page">Talha Mansoor</a></li>
+    </ul>
+</div>
+</footer>            <script src="http://code.jquery.com/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+        <script>
+            function validateForm(query)
+            {
+                return (query.length > 0);
+            }
+        </script>
+
+    </body>
+</html>

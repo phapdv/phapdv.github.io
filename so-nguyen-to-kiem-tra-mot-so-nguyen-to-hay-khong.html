@@ -66,11 +66,11 @@
 <h2>Kiểm tra có là một số nguyên tố?</h2>
 <p>Có nhiều cách để kiểm tra 1 số tự nhiên có phải là số nguyên tố hay không. Ở đây chúng ta sẽ sử dụng cách kiểm tra các ước của một số tự nhiên.</p>
 <ul>
-<li>Đầu tiên thuật toán sẽ là kiểm tra các số có khả năng là ước của số <code>n</code> hay không? Dãy số có khả năng là ước của <code>n</code> nằm trong khoảng <code>n-1</code>. Code python như sau:</li>
+<li>Đầu tiên thuật toán sẽ là kiểm tra các số có khả năng là ước của số <code>n</code> hay không? Dãy số có khả năng là ước của <code>n</code> nằm trong khoảng từ 1 đến <code>n</code>. Nhưng vì <code>1</code> và <code>n</code> thì luôn là ước của số đó nên có thể loại bỏ hai trường hợp này. Code python như sau:</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">13</span>
 <span class="k">def</span> <span class="nf">is_prime</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">False</span>
     <span class="k">return</span> <span class="bp">True</span>
@@ -178,6 +178,8 @@ Khi giải thuật kết thúc, tất các số chưa bị đánh dấu trong da
             <ul class="articles_timeline">
  
                 <li class="previous_article">« <a href="/solution-for-projecteuler.html" title="Previous: Solution for ProjectEuler">Solution for ProjectEuler</a></li>
+ 
+                <li class="next_article"><a href="/bat-ky-va-tat-ca.html" title="Next: Bất kỳ và Tất cả">Bất kỳ và Tất cả</a> »</li>
             </ul>
             </nav>
             </aside>
@@ -192,10 +194,10 @@ Khi giải thuật kết thúc, tất các số chưa bị đánh dấu trong da
             <h4>Tags</h4>
             <ul class="list-of-tags tags-in-article"> 
                 <li><a href="/tags.html#Programming-ref">Programming
-                    <span>1</span>
+                    <span>2</span>
 </a></li>
                 <li><a href="/tags.html#Python-ref">Python
-                    <span>1</span>
+                    <span>2</span>
 </a></li>
             </ul>
 
