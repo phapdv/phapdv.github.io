@@ -6,7 +6,7 @@ Tags: Programming, Python
 
 ## Prime number (Số nguyên tố)
 ![](https://upload.wikimedia.org/wikipedia/commons/b/b8/Animation_Sieb_des_Eratosthenes_%28vi%29.gif)
-> Ngày xưa đi học thì chỉ biết số nguyên tố là số chỉ chia hết cho 1 và chính nó. Sau khi đi học lớp python của [PyFML](http://pymi.vn) thì mới biết là ước tự nhiên khác 1 nhỏ nhất của một số tự nhiên là số nguyên tố. Hay nói cách khác là số tự nhiên chỉ có ước số là 1 và chính nó là số nguyên tố. Xa hơn chút nữa là chúng ta cần kiểm tra xem số tự nhiên đó có ước nào nữa ngoài ước 1 và chính nó.
+> Ngày xưa đi học thì chỉ biết số nguyên tố là số tự nhiên chỉ chia hết cho 1 và chính nó. Sau khi đi học lớp python của [PyFML](http://pymi.vn) thì mới biết là ước tự nhiên khác 1 nhỏ nhất của một số tự nhiên là số nguyên tố. Hay nói cách khác là số tự nhiên chỉ có ước số là 1 và chính nó là số nguyên tố. Xa hơn chút nữa là chúng ta cần kiểm tra xem số tự nhiên đó có ước nào nữa ngoài ước 1 và chính nó.
 
 ## Kiểm tra có là một số nguyên tố?
 Có nhiều cách để kiểm tra 1 số tự nhiên có phải là số nguyên tố hay không. Ở đây chúng ta sẽ sử dụng cách kiểm tra các ước của một số tự nhiên.
